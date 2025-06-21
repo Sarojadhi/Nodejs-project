@@ -1,4 +1,4 @@
-import {readFile, writeFile } from 'fs/promises'
+import {readFile, writeFile , appendFile} from 'fs/promises'
 
 
 // README FILE : THIS above line of code help to read text from text.jsx file .
@@ -15,3 +15,9 @@ await writeFile(filename,content);
 write_file("ai.py","This is a python file .");
 
 readeFile("ai.py");
+
+const appendfile = async(filename,content)=>{
+    await appendFile(filename,content);
+    console.log("secessfully added ");
+}
+appendfile("ai.py","added by appendfile . ")
